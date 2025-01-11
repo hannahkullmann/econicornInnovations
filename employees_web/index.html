@@ -23,9 +23,90 @@
         </div>
     </header>
 
-    <main class="kundenportal">
-        <h1>Willkommen im Kundenportal von Rödl energie!</h1>
-        
+    <main class="mitarbeiterportal">
+       <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="/">Kundenstatus Telefon</a></li>
+                <li><a href="/">Kundenstatus E-Mail</a></li>
+                <li><a href="/">Beratungstermine</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="content">
+        <table class="customer-table">
+            <thead>
+                <tr>
+                    <th>Kundennummer</th>
+                    <th>Name</th>
+                    <th>Füllstand</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>KD-004</td>
+                    <td>Weber Logistik</td>
+                    <td>
+                        <div class="fuel-gauge">
+                                <div class="fuel-level-mask" style="width: 10%">
+                                <div class="fuel-level"></div>
+                                
+                            </div>
+                            <span>10%</span>
+                        </div>
+                    </td>
+                    <td><span class="status urgent">Dringend</span></td>
+                </tr>
+                <tr>
+                    <td>KD-002</td>
+                    <td>Schmidt & Co. KG</td>
+                    <td>
+                        <div class="fuel-gauge">
+                            <div class="fuel-level-mask" style="width: 25%">
+                            <div class="fuel-level"></div>
+                            
+                            </div>
+                            <span>25%</span>
+                        </div>
+                    </td>
+                    <td><span class="status pending">In Bearbeitung</span></td>
+                </tr>
+                <tr>
+                    <td>KD-003</td>
+                    <td>Meyer Industrie AG</td>
+                    <td>
+                        <div class="fuel-gauge">
+                            <div class="fuel-level-mask" style="width: 50%">
+                            <div class="fuel-level"></div>
+                            </div>
+                            <span>50%</span>
+                        </div>
+                    </td>
+                    <td><span class="status new">Neu</span></td>
+                </tr>
+                <tr>
+                    <td>KD-001</td>
+                    <td>Mustermann GmbH</td>
+                    <td>
+                        <div class="fuel-gauge">
+                            <div class="fuel-level-mask" style="width: 75%">
+                                <div class="fuel-level"></div>    
+                            </div>
+                            <span>75%</span>
+                        </div>
+                        </div>
+                    </div>
+                    </td>
+                    <td><span class="status completed">Abgeschlossen</span></td>
+                </tr>
+              
+               
+               
+            </tbody>
+        </table>
+    </div>
       
     </main>
     

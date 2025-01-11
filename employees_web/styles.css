@@ -1,6 +1,9 @@
 :root {
-    --primary-red: #E2001A;
+    --primary-red: #ff3b30;
     --text-gray: #58585A;
+    --orange: #ff9500;
+    --yellow: #ffcc00;
+    --green: #34c759;
 }
 
 * {
@@ -26,6 +29,12 @@ body {
     margin-bottom: 1rem;
 }
 
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 .logo img {
     height: 50px;
 }
@@ -40,3 +49,224 @@ body {
     color: var(--text-gray);
     text-decoration: none;
 }
+
+.red-icon {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.user-name {
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.mitarbeiterportal {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+}
+
+.sidebar-nav{
+    width: 100%;
+    flex: 1;
+    position: relative;
+    margin: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+
+
+.sidebar-nav li {
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-nav ul li a{
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: 1px solid var(--primary-red);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-nav a:hover {
+    background: white;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a:active {
+    background: var(--primary-red);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.content {
+    flex: 1;
+    margin: 0 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.customer-table th {
+    background: var(--primary-red);
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.customer-table td {
+    color: var(--text-gray);
+}
+
+.customer-table tr:hover {
+    background: #f9f9f9;
+}
+
+/* Füllstandsanzeige */
+.fuel-gauge {
+    width: 200px;
+    height: 20px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fuel-level{
+    height: 100%;
+    position: relative;
+    background: linear-gradient(90deg, var(--primary-red) 0%, var(--orange) 33%, var(--yellow) 66%, var(--green) 100%);
+    width: 200px;
+}
+
+.fuel-level-mask{
+    height: 100%;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fuel-gauge span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-dark);
+    font-size: 12px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+}
+
+/* Status Styles */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status.completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status.pending {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.status.new {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status.urgent {
+    background: #ffebee;
+    color: var(--primary-red);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+        margin: 20px auto;
+    }
+
+    .customer-table th,
+    .customer-table td {
+        padding: 10px;
+    }
+
+    .fuel-gauge {
+        width: 150px;
+    }
+
+    .status {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .customer-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .fuel-gauge {
+        width: 100px;
+    }
+}
+
+
