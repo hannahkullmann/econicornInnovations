@@ -34,16 +34,79 @@
        
             <h1>Meine Bestellungen</h1>
             <div class="oil-price-and-current-order">
-                <div class="oil-price">
-                    <h2>Aktueller Ölpreis</h2>
-                    <div class="row">
-                        <p class="oil-price-brutto"> 99,37€</p><p class="unit">/100l brutto</p>
+                <div class="price-widget">
+                    <div class="widget-header">
+                        <h3>Aktueller Ölpreis</h3>
+                        <span class="update-time">Letzte Aktualisierung: 23.01.2024 15:30</span>
                     </div>
-
-                    <div class="row">
-                        <p class="oil-price-netto">83,50€</p><p class="unit">/100l netto</p>
+            
+                    <div class="current-price-section">
+                        <div class="price-display">
+                            <span class="price">89,50</span>
+                            <span class="currency">ct/L</span>
+                        </div>
+                        <div class="price-change decrease">
+                            <span class="change-icon">↓</span>
+                            <span class="change-value">-4,2%</span>
+                            <span class="change-text">zum Durchschnitt</span>
+                        </div>
+                    </div>
+            
+                    <div class="comparison-section">
+                        <div class="avg-price-info">
+                            <div class="info-row">
+                                <span class="label">Ø Preis (6 Monate)</span>
+                                <span class="value">93,42 ct/L</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">Absolute Differenz</span>
+                                <span class="value decrease">-3,92 ct/L</span>
+                            </div>
+                        </div>
+            
+                        <div class="savings-calculator">
+                            <h4>Ihre potentielle Ersparnis</h4>
+                            <div class="calculator-content">
+                                <div class="calculation-row">
+                                    <span>Bei 5.000 Litern:</span>
+                                    <span class="savings decrease">-196,00 €</span>
+                                </div>
+                                <div class="calculation-row">
+                                    <span>Bei 10.000 Litern:</span>
+                                    <span class="savings decrease">-392,00 €</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="price-chart">
+                        <div class="chart-header">
+                            <h4>Preisentwicklung</h4>
+                            <div class="chart-legend">
+                                <span class="legend-item">
+                                    <span class="legend-dot current"></span>
+                                    Aktuell
+                                </span>
+                                <span class="legend-item">
+                                    <span class="legend-dot average"></span>
+                                    Durchschnitt
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <!-- Beispiel für einen vereinfachten Chart -->
+                            <div class="chart-line"></div>
+                            <div class="chart-average"></div>
+                            <div class="chart-marker current"></div>
+                        </div>
+                    </div>
+            
+                    <div class="widget-footer">
+                        <button class="history-btn">Preisverlauf anzeigen</button>
+                        <button class="order-btn">Jetzt bestellen</button>
                     </div>
                 </div>
+               
 
                 <div class="order-status-widget">
                     <div class="widget-header">
