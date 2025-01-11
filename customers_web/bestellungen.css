@@ -118,6 +118,11 @@ body {
     margin-bottom: 2rem;
 }
 
+.orders h2 {
+    color: black;
+    margin-bottom: 2rem;
+}
+
 /* Table Styles */
 .table-container {
     overflow-x: auto;
