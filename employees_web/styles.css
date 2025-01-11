@@ -426,12 +426,12 @@ body {
 
 /* Demo Button */
 .show-popup-btn {
-    margin: 20px;
+    
     padding: 10px 20px;
     background: var(--primary-red);
     color: var(--white);
     border: none;
-    border-radius: 4px;
+
     cursor: pointer;
     font-size: 16px;
 }
