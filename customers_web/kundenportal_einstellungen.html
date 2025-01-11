@@ -41,24 +41,28 @@
             <div class="settings-section">
                 <h2>Benachrichtigungen</h2>
                 <div class="settings-group">
-                    <label class="checkbox-container">
-                        <input type="checkbox" name="email_notifications" checked>
-                        <span class="checkmark"></span>
+                    <label class="radio-container">
+                        <input type="radio" name="notification_preference" value="email" checked>
+                        <span class="radio-mark"></span>
                         <div class="label-content">
                             <span class="label-title">E-Mail-Benachrichtigungen</span>
                             <span class="label-description">Erhalten Sie eine Information über Ihren Ölfüllstand per E-Mail, wenn dieser leer gehen sollte.</span>
                         </div>
                     </label>
 
-                    <label class="checkbox-container">
-                        <input type="checkbox" name="phone_notifications">
-                        <span class="checkmark"></span>
+                    <label class="radio-container">
+                        <input type="radio" name="notification_preference" value="phone">
+                        <span class="radio-mark"></span>
                         <div class="label-content">
                             <span class="label-title">Telefonische Benachrichtigungen</span>
                             <span class="label-description">Werden Sie telefonisch über das Leergehen Ihres Ölstandes informiert.</span>
                         </div>
                     </label>
+                </div>
+            </div>
 
+            <div class="settings-section">
+                <div class="settings-group">
                     <label class="checkbox-container">
                         <input type="checkbox" name="delivery_status_notifications" checked>
                         <span class="checkmark"></span>
@@ -127,8 +131,6 @@
             </div>
         </form>
     </main>
-    
 
-    </script>
 </body>
 </html>
