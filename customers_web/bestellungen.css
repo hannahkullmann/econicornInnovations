@@ -143,7 +143,7 @@ body {
 .orders {
     display: flex;
     flex-direction: column;
-    padding: 5rem 5rem;
+    padding: 3rem 5rem;
     position: relative;
     gap: 2rem;
     top: 2rem;
