@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rödl energie - Kundenportal</title>
+    <link rel="stylesheet" href="bestellungen.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <a href="/" class="logo">
+                <img src="./assets/roedl-energie.png" alt="Rödl energie Logo">
+            </a>
+            <div class="top-right">
+                <nav class="secondary-nav">
+                    <ul>
+                        <p class="user-name">Hallo, Peter Müller</p>
+                        <li><a href="./index.html" class="center">Abmelden<img src="./assets/log-out.svg" alt="Logout" class="red-icon"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="nav-button"><a href="./kundenportal_index.html" >Heizölstand</a></li>
+                <li class="nav-button"><a href="./kundenportal_bestellungen.html" >Bestellungen & Preise</a></li>
+                <li class="nav-button"><a href="/setting" >Einstellungen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="orders">
+       
+            <h1>Meine Bestellungen</h1>
+            <h2>Aktueller Ölpreis</h2>
+            <h2>Aktuelle Bestellungen</h2>
+            <h2>Betsellhistorie</h2>
+
+            <div class="table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Bestellnummer</th>
+                            <th>Datum</th>
+                            <th>Produkt</th>
+                            <th>Menge</th>
+                            <th>Status</th>
+                            <th>Rechnung</th>
+                            <th>Aktion</th>                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BO-2024-001</td>
+                            <td>15.01.2024</td>
+                            <td>Heizöl Premium</td>
+                            <td>5.000 L</td>
+                            <td><span class="status pending">Vorsl. Lieferung: 13.01.2025, 10:00 Uhr</span></td>
+                            
+                            <td>
+                                <a href="" class="download-receipt">BO-2024-001</a>
+                            </td>
+                            <td>
+                                <a href="" class="order-again">Erneut bestellen</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BO-2023-089</td>
+                            <td>01.12.2023</td>
+                            <td>Heizöl Premium</td>
+                            <td>7.500 L</td>
+                            <td><span class="status urgent">Storniert</span></td>
+                            <td>
+                               -
+                            </td>
+                            <td>
+                                <a href="" class="order-again">Erneut bestellen</a>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td>BO-2023-076</td>
+                            <td>15.11.2023</td>
+                            <td>Heizöl Standard</td>
+                            <td>6.000 L</td>
+                            <td><span class="status completed">Geliefert</span></td>
+                            <td>
+                                <a href="" class="download-receipt">BO-2023-076</a>
+                            </td>
+                            <td>
+                                <a href="" class="order-again">Erneut bestellen</a>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </main>  
+</body>
+</html>
