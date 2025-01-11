@@ -141,13 +141,15 @@ body {
 }
 
 .orders {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 5rem 5rem;
+    position: relative;
+    gap: 2rem;
 }
 
 .orders h1 {
     color: var(--primary-red);
-    margin-bottom: 2rem;
 }
 
 .orders h2 {
@@ -251,18 +253,26 @@ body {
 .oil-price-and-current-order {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: stretch;
     justify-content: space-around;
+    position: relative;
+    height: fit-content;
+    width: 100%;
 }
 
 
 .order-status-widget {
     background: var(--white);
     border-radius: 8px;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     padding: 20px;
+    height: 850.6px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 /* Widget Header */
@@ -270,17 +280,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .widget-header h3 {
     color: var(--text-dark);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .order-number {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 /* Order Info */
@@ -288,7 +297,6 @@ body {
     background: var(--background-light);
     padding: 15px;
     border-radius: 6px;
-    margin-bottom: 25px;
 }
 
 .info-row {
@@ -303,11 +311,13 @@ body {
 
 .label {
     color: var(--text-light);
+    font-size: 1.1rem;
 }
 
 .value {
     color: var(--text-dark);
     font-weight: 500;
+    font-size: 1.1rem;
 }
 
 /* Timeline */
@@ -359,13 +369,13 @@ body {
 
 .timeline-content h4 {
     color: var(--text-dark);
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 4px;
 }
 
 .timeline-content p {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .timeline-item.completed .timeline-content h4 {
@@ -381,7 +391,6 @@ body {
     background: var(--background-light);
     padding: 15px;
     border-radius: 6px;
-    margin: 20px 0;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -393,8 +402,8 @@ body {
 
 .estimate-text p {
     color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 4px;
+    font-size: 1.1rem;
+
 }
 
 .estimate-text strong {
@@ -405,14 +414,12 @@ body {
 .widget-footer {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+  
 }
 
-.contact-btn,
-.details-btn {
+.contact-btn {
     padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     cursor: pointer;
     flex: 1;
 }
@@ -423,56 +430,47 @@ body {
     color: var(--primary-red);
 }
 
-.details-btn {
-    background: var(--primary-red);
-    border: 1px solid var(--primary-red);
-    color: var(--white);
-}
-
 /* Hover Effects */
-.contact-btn:hover,
-.details-btn:hover {
-    opacity: 0.9;
+.contact-btn:hover{
+    background: var(--primary-red);
+    color: var(--white);
+    transition: all 0.3s ease;
 }
 
 .price-widget {
     background: var(--white);
     border-radius: 8px;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    flex: 1;
 }
 
-/* Widget Header */
-.widget-header {
+/* Verschiebe alle verschachtelten Styles nach außen */
+.price-widget .widget-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.widget-header h3 {
-    color: var(--text-dark);
-    font-size: 1.2rem;
+  
 }
 
 .update-time {
     color: var(--text-light);
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 /* Current Price Section */
 .current-price-section {
     text-align: center;
-    margin-bottom: 25px;
+   
     padding: 20px;
     background: var(--background-light);
     border-radius: 8px;
-}
-
-.price-display {
-    margin-bottom: 10px;
 }
 
 .price {
@@ -493,7 +491,7 @@ body {
     gap: 5px;
     padding: 8px 12px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .price-change.decrease {
@@ -506,35 +504,21 @@ body {
     color: var(--increase-color);
 }
 
-/* Comparison Section */
-.comparison-section {
-    margin-bottom: 25px;
-}
-
 .avg-price-info {
     background: var(--white);
-    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 20px;
+
 }
 
 .info-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+
 }
 
 .info-row:last-child {
     margin-bottom: 0;
-}
-
-.label {
-    color: var(--text-light);
-}
-
-.value {
-    font-weight: 500;
 }
 
 .value.decrease {
@@ -554,14 +538,13 @@ body {
 
 .savings-calculator h4 {
     color: var(--text-dark);
-    margin-bottom: 10px;
 }
 
 .calculation-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 .savings {
@@ -585,7 +568,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
 }
 
 .chart-legend {
@@ -615,13 +597,13 @@ body {
     background: var(--chart-color);
 }
 
-.chart-container {
-    height: 100px;
+.chart-container img{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    object-fit: contain;
     position: relative;
-    background: var(--background-light);
-    border-radius: 8px;
     padding: 10px;
-    margin-top: 10px;
 }
 
 .chart-line {
@@ -661,34 +643,28 @@ body {
 .widget-footer {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
 }
 
-.history-btn,
 .order-btn {
     padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     cursor: pointer;
     flex: 1;
-}
-
-.history-btn {
-    background: var(--white);
-    border: 1px solid var(--primary-red);
-    color: var(--primary-red);
+    font-weight: bold;
 }
 
 .order-btn {
     background: var(--primary-red);
     border: 1px solid var(--primary-red);
     color: var(--white);
+    transition: all 0.3s ease;
 }
 
 /* Hover Effects */
-.history-btn:hover,
 .order-btn:hover {
-    opacity: 0.9;
+    background: var(--white);
+    color: var(--primary-red);
+    transition: all 0.3s ease;
 }
 
 /* Responsive Design */
