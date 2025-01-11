@@ -167,8 +167,8 @@ body {
 }
 
 .customer-table td button{
-    color: white;
-    background-color: var(--primary-red);
+    color: var(--primary-red);
+    background-color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border: 1px solid var(--primary-red);
@@ -176,8 +176,8 @@ body {
 }
 
 .customer-table td button:hover{
-    background-color: white;
-    color: var(--primary-red);
+    background-color: var(--primary-red);
+    color: white;
     transition: all 0.3s ease;
 }
 
@@ -363,9 +363,6 @@ body {
     font-weight: 500;
 }
 
-
-
-
 /* Orders Table */
 .orders-section {
     background: var(--background-light);
@@ -428,17 +425,10 @@ body {
 .show-popup-btn {
     
     padding: 10px 20px;
-    background: var(--primary-red);
-    color: var(--white);
-    border: none;
-
     cursor: pointer;
     font-size: 16px;
 }
 
-.show-popup-btn:hover {
-    opacity: 0.9;
-}
 
 .popup-body a{
     color: white;
