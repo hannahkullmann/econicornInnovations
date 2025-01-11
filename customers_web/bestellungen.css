@@ -423,6 +423,7 @@ body {
     font-size: 1.1rem;
     cursor: pointer;
     flex: 1;
+    font-weight: bold;
 }
 
 .contact-btn {
