@@ -59,7 +59,7 @@
                         </div>
                     </td>
                     <td><span class="status urgent">Dringend</span></td>
-                    <td><a href="/">Jetzt Bearbeiten</a></td>
+                    <td><button onclick="document.getElementById('customerPopup').style.display='block'" class="show-popup-btn">Jetzt Bearbeiten</button></td>
                 </tr>
                 <tr>
                     <td>KD-002</td>
@@ -120,11 +120,130 @@
                     <td><span class="status completed">Keine Aktion fällig</span></td>
                     <td><p></p></td>
                 </tr>
-              
-               
-               
             </tbody>
         </table>
+        <!-- Popup Container -->
+    <div id="customerPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Kundendetails</h2>
+                <span class="close-btn" onclick="document.getElementById('customerPopup').style.display='none'">&times;</span>
+            </div>
+
+            <div class="popup-body">
+                <div class="customer-info-grid">
+                    <!-- Basis Informationen -->
+                    <div class="info-section">
+                        <h3>Basisinformationen</h3>
+                        <div class="info-group">
+                            <label>Kundennummer:</label>
+                            <span>KD-001</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Firmenname:</label>
+                            <span>Mustermann GmbH</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Status:</label>
+                            <span class="status completed">Aktiv</span>
+                        </div>
+                    </div>
+
+                    <!-- Adresse -->
+                    <div class="info-section">
+                        <h3>Adresse</h3>
+                        <div class="info-group">
+                            <label>Straße:</label>
+                            <span>Musterstraße 123</span>
+                        </div>
+                        <div class="info-group">
+                            <label>PLZ/Ort:</label>
+                            <span>12345 Musterstadt</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Land:</label>
+                            <span>Deutschland</span>
+                        </div>
+                    </div>
+
+                    <!-- Kontaktdaten -->
+                    <div class="info-section">
+                        <h3>Kontaktdaten</h3>
+                        <div class="info-group">
+                            <label>Ansprechpartner:</label>
+                            <span>Max Mustermann</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Telefon:</label>
+                            <span>+49 123 456789</span>
+                        </div>
+                        <div class="info-group">
+                            <label>E-Mail:</label>
+                            <span>info@mustermann-gmbh.de</span>
+                        </div>
+                    </div>
+
+                    <!-- Tank Details -->
+                    <div class="info-section">
+                        <h3>Tank-Details</h3>
+                        <div class="info-group">
+                            <label>Aktueller Füllstand:</label>
+                            <div class="fuel-gauge">
+                                 <div class="fuel-level-mask" style="width: 75%">
+                                    <div class="fuel-level"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        <div class="info-group">
+                            <label>Tank-Kapazität:</label>
+                            <span>10.000 Liter</span>
+                        </div>
+                        <div class="info-group">
+                            <label>Letzte Befüllung:</label>
+                            <span>15.01.2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/">Daten bearbeiten</a>
+
+                <!-- Letzte Bestellungen -->
+                <div class="orders-section">
+                    <h3>Letzte Bestellungen</h3>
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th>Bestellnummer</th>
+                                <th>Menge</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15.01.2024</td>
+                                <td>BO-2024-001</td>
+                                <td>5.000 L</td>
+                                <td><span class="status completed">Geliefert</span></td>
+                            </tr>
+                            <tr>
+                                <td>01.12.2023</td>
+                                <td>BO-2023-089</td>
+                                <td>7.500 L</td>
+                                <td><span class="status completed">Geliefert</span></td>
+                            </tr>
+                            <tr>
+                                <td>15.11.2023</td>
+                                <td>BO-2023-076</td>
+                                <td>6.000 L</td>
+                                <td><span class="status completed">Geliefert</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
       
     </main>

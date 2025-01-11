@@ -166,7 +166,7 @@ body {
     color: var(--text-gray);
 }
 
-.customer-table td a{
+.customer-table td button{
     color: white;
     background-color: var(--primary-red);
     text-decoration: none;
@@ -175,7 +175,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.customer-table td a:hover{
+.customer-table td button:hover{
     background-color: white;
     color: var(--primary-red);
     transition: all 0.3s ease;
@@ -266,6 +266,218 @@ body {
     align-items: center;
     justify-content: center;
     width: fit-content;
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 95vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.popup-header {
+    padding: 20px;
+    background-color: var(--primary-red);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.close-btn {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.close-btn:hover {
+    opacity: 0.8;
+}
+
+.popup-body {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Customer Info Grid */
+.customer-info-grid {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+    color: var(--text-gray);
+    justify-content: space-between;
+
+}
+
+.info-section {
+    background: var(--background-light);
+    border-radius: 8px;
+}
+
+.info-section h3 {
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-group {
+    margin-bottom: 10px;
+    color: var(--text-gray);
+}
+
+.info-group label {
+    display: block;
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-group span {
+    font-weight: 500;
+}
+
+
+
+
+/* Orders Table */
+.orders-section {
+    background: var(--background-light);
+    border-radius: 8px;
+    width: 100%;
+   
+}
+
+.orders-section h3 {
+    color: var(--primary-red);
+    margin: 15px 0px;
+    font-size: 18px;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.orders-table th {
+    background: var(--primary-red);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.orders-table td {
+    color: var(--text-gray);
+}
+
+.orders-table tr:hover {
+    background: #f9f9f9;
+}
+
+/* Status Styles */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status.completed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Demo Button */
+.show-popup-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.show-popup-btn:hover {
+    opacity: 0.9;
+}
+
+.popup-body a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 1.5rem;
+}
+
+.popup-body a:hover{
+    background-color: white;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
+    .customer-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
 
 /* Responsive Design */
