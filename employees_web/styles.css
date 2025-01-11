@@ -1,0 +1,42 @@
+:root {
+    --primary-red: #E2001A;
+    --text-gray: #58585A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    padding: 1rem 2rem;
+    background: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.secondary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.secondary-nav a {
+    color: var(--text-gray);
+    text-decoration: none;
+}
