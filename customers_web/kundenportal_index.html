@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rödl energie - Kundenportal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <a href="/" class="logo">
+                <img src="./assets/roedl-energie.png" alt="Rödl energie Logo">
+            </a>
+            <div class="top-right">
+                <nav class="secondary-nav">
+                    <ul>
+                        <p class="user-name">Hallo, Peter Müller</p>
+                        <li><a href="/logout" class="center">Abmelden<img src="./assets/log-out.svg" alt="Logout" class="red-icon"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="nav-button"><a href="/oil" >Heizölstand</a></li>
+                <li class="nav-button"><a href="/orders" >Bestellungen</a></li>
+                <li class="nav-button"><a href="/setting" >Einstellungen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kundenportal">
+        <h1>Willkommen im Kundenportal von Rödl energie!</h1>
+        
+        <div class="oil-stand">
+            <div class="oil-stand-container">
+            <div class="fuel-gauge">
+                <div class="gauge-body">
+                    <!-- Color segments -->
+                    <div class="segment red"></div>
+                    <div class="segment orange"></div>
+                    <div class="segment yellow"></div>
+                    <div class="segment green"></div>
+                    
+                    <!-- Tick marks -->
+                    <div class="tick-marks">
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                        <div class="tick"></div>
+                    </div>
+    
+    
+                    <!-- Needle -->
+                    <div class="needle"></div>
+                    <div class="needle-center"></div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="row">
+                <div class="oil-stand-text">
+                    <h2>Aktueller Heizölstand</h2>
+                    <p class="oil-stand-percentage">60%</p>
+                    <p>Das entspricht ca. 250 Litern</p>
+                       
+                </div>
+                <div class="oil-stand-text">
+                    <h2>Geschätzte Restlaufzeit</h2>
+                    <div class="oil-stand-time">
+                    <p class="oil-stand-percentage">20</p>
+                    <p class="oil-stand-weeks">Wochen</p>
+                    </div>
+                    <p>Zuletzt aktualisiert am 10.01.2025</p>
+                </div>
+            </div>
+            <a href="/bestellen" class="button">Jetzt nachbestellen</a>
+        </div>
+    </main>
+    
+    <script>
+        const needle = document.querySelector('.needle');
+        const input = document.getElementById('fuel-level');
+
+        function updateNeedle(value) {
+            // Convert percentage to degrees (0% = -90deg, 100% = 90deg)
+            const degrees = (value / 100) * 180 - 90;
+            needle.style.transform = `rotate(${degrees}deg)`;
+        }
+
+        // Initial position
+        updateNeedle(60);
+
+        // Update on input change
+        input.addEventListener('input', (e) => {
+            const value = Math.min(Math.max(0, e.target.value), 100);
+            updateNeedle(value);
+        });
+    </script>
+</body>
+</html>

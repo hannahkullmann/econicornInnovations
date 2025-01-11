@@ -1,0 +1,440 @@
+:root {
+    --primary-red: #E2001A;
+    --text-gray: #58585A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    padding: 1rem 2rem;
+    background: white;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-search {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.phone {
+    color: var(--primary-red);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.search-btn {
+    background: var(--primary-red);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.secondary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.secondary-nav a {
+    color: var(--text-gray);
+    text-decoration: none;
+}
+
+.avia-logo {
+    height: 30px;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    position: relative;
+}
+
+.nav-button a{
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: 1px solid var(--primary-red);
+    transition: all 0.3s ease;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-button{
+    flex: 1;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.button {
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: 1px solid var(--primary-red);
+    width: 100%;
+    text-align: center;
+}
+
+.button:hover {
+    background: white;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.nav-button a:hover {
+    background: white;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.nav-button a:active {
+    background: var(--primary-red);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-button:first-child {
+    margin-left: 0;
+}
+
+.nav-button:last-child {
+    margin-right: 0;
+}
+
+.hero {
+    height: 80vh;
+    background-image: url('./assets/titelbild.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.hero-content {
+    text-align: left;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.social-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-button {
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.red-icon {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.user-name {
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.kundenportal {
+    padding: 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 5rem;
+}
+
+.kundenportal h1 {
+    color: var(--primary-red);
+}
+
+.oil-stand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5rem;
+}
+
+.oil-stand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.oil-stand-text p {
+    color: var(--text-gray);
+}
+
+.oil-stand-text .oil-stand-percentage {
+    font-size: 8rem;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
+.fuel-gauge {
+    width: 300px;
+    height: 150px;
+    position: relative;
+}
+
+.gauge-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 150px 150px 0 0;
+}
+
+/* Color segments */
+.segment {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+}
+
+.segment.red {
+    background: #ff3b30;
+    transform: translate(-25%, 30%) rotate(-45deg);
+    width: 50%;
+    z-index: 1;
+}
+
+.segment.orange {
+    background: #ff9500;
+    width: 50%;
+}
+
+.segment.yellow {
+    background: #ffcc00;
+    width: 50%;
+    transform: translate(100%, 0);
+}
+
+.segment.green {
+    background: #34c759;
+     transform: translate(125%, 30%) rotate(45deg);
+    width: 50%;
+    z-index: 1;
+}
+
+/* Tick marks */
+.tick-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.tick {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #333;
+    left: 50%;
+    top: 10px;
+    transform-origin: 50% 140px;
+    z-index: 5;
+}
+
+/* Generate tick marks */
+.tick:nth-child(1) { transform: rotate(-90deg); }
+.tick:nth-child(2) { transform: rotate(-78deg); }
+.tick:nth-child(3) { transform: rotate(-66deg); }
+.tick:nth-child(4) { transform: rotate(-54deg); }
+.tick:nth-child(5) { transform: rotate(-42deg); }
+.tick:nth-child(6) { transform: rotate(-30deg); }
+.tick:nth-child(7) { transform: rotate(-18deg); }
+.tick:nth-child(8) { transform: rotate(-6deg); }
+.tick:nth-child(9) { transform: rotate(6deg); }
+.tick:nth-child(10) { transform: rotate(18deg); }
+.tick:nth-child(11) { transform: rotate(30deg); }
+.tick:nth-child(12) { transform: rotate(42deg); }
+.tick:nth-child(13) { transform: rotate(54deg); }
+.tick:nth-child(14) { transform: rotate(66deg); }
+.tick:nth-child(15) { transform: rotate(78deg); }
+
+/* Needle */
+.needle {
+    position: absolute;
+    width: 2%;
+    height: 120px;
+    background: #333;
+    left: 49%;
+    bottom: 0;
+    transform-origin: bottom center;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease;
+    z-index: 5;
+}
+
+.needle-center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 5;
+}
+
+/* Controls */
+.controls {
+    margin-top: 20px;
+}
+
+.oil-stand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+}
+.oil-stand-time {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.oil-stand-time .oil-stand-weeks {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-left: 0.5rem;
+}
+
+.oil-stand-text a {
+    margin-top: 2rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 5rem;
+}
+
+@media (max-width: 1024px) {
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .secondary-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-sidebar {
+        display: none;
+    }
+}
