@@ -166,6 +166,30 @@ body {
     color: var(--text-gray);
 }
 
+.customer-table td a{
+    color: white;
+    background-color: var(--primary-red);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+.customer-table td a:hover{
+    background-color: white;
+    color: var(--primary-red);
+    transition: all 0.3s ease;
+}
+
+
+.customer-table td p{
+    font-size: 12px;
+    color: var(--text-gray);
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
 .customer-table tr:hover {
     background: #f9f9f9;
 }
@@ -213,6 +237,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
+    width: fit-content;
 }
 
 .status.completed {
@@ -233,6 +258,14 @@ body {
 .status.urgent {
     background: #ffebee;
     color: var(--primary-red);
+}
+
+.column{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 }
 
 /* Responsive Design */
