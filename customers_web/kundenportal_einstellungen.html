@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rödl energie - Kundeneinstellungen</title>
+    <link rel="stylesheet" href="einstellungen.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-bar">
+            <a href="/" class="logo">
+                <img src="./assets/roedl-energie.png" alt="Rödl energie Logo">
+            </a>
+            <div class="top-right">
+                <nav class="secondary-nav">
+                    <ul>
+                        <p class="user-name">Hallo, Manuel Kania</p>
+                        <li><a href="./index.html" class="center">Abmelden<img src="./assets/log-out.svg" alt="Logout" class="red-icon"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="nav-button"><a href="./kundenportal_index.html" >Heizölstand</a></li>
+                <li class="nav-button"><a href="./kundenportal_bestellungen.html" >Bestellungen & Preise</a></li>
+                <li class="nav-button"><a href="./kundenportal_einstellungen.html" >Einstellungen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="settings-container">
+        <div class="settings-header">
+            <h1>Einstellungen</h1>
+            <p class="subtitle">Verwalten Sie Ihre Benachrichtigungen und Präferenzen</p>
+        </div>
+
+        <form class="settings-form">
+            <!-- Benachrichtigungen -->
+            <div class="settings-section">
+                <h2>Benachrichtigungen</h2>
+                <div class="settings-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="email_notifications" checked>
+                        <span class="checkmark"></span>
+                        <div class="label-content">
+                            <span class="label-title">E-Mail-Benachrichtigungen</span>
+                            <span class="label-description">Erhalten Sie eine Information über Ihren Ölfüllstand per E-Mail, wenn dieser leer gehen sollte.</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="phone_notifications">
+                        <span class="checkmark"></span>
+                        <div class="label-content">
+                            <span class="label-title">Telefonische Benachrichtigungen</span>
+                            <span class="label-description">Werden Sie telefonisch über das Leergehen Ihres Ölstandes informiert.</span>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-container">
+                        <input type="checkbox" name="delivery_status_notifications" checked>
+                        <span class="checkmark"></span>
+                        <div class="label-content">
+                            <span class="label-title">Updates über den Lieferstatus</span>
+                            <span class="label-description">Da Sie bei der Lieferung persönlich anwesend sein sollten, informieren wir Sie über den Lieferstatus Ihrer Bestellung.</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h2>Benachrichtigungszeitpunkt</h2>
+                <div class="settings-group">
+                    <div class="slider-container">
+                        <div class="slider-header">
+                            <label for="tank_level">Benachrichtigung bei Tankfüllstand</label>
+                            <span class="slider-value">10%</span>
+                        </div>
+                        <input 
+                            type="range" 
+                            id="tank_level" 
+                            name="tank_level" 
+                            min="0" 
+                            max="100" 
+                            value="10"
+                            class="slider"
+                            oninput="this.parentNode.querySelector('.slider-value').textContent = this.value + '%'"
+                        >
+                        <div class="slider-labels">
+                            <span>0%</span>
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechnungsstellung -->
+            <div class="settings-section">
+                <h2>Rechnungsstellung</h2>
+                <div class="settings-group">
+                    <label class="radio-container">
+                        <input type="radio" name="billing_preference" value="email" checked>
+                        <span class="radio-mark"></span>
+                        <div class="label-content">
+                            <span class="label-title">Rechnung per E-Mail</span>
+                            <span class="label-description">Erhalten Sie Ihre Rechnungen digital per E-Mail</span>
+                        </div>
+                    </label>
+
+                    <label class="radio-container">
+                        <input type="radio" name="billing_preference" value="post">
+                        <span class="radio-mark"></span>
+                        <div class="label-content">
+                            <span class="label-title">Rechnung per Post</span>
+                            <span class="label-description">Erhalten Sie Ihre Rechnungen klassisch per Post</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Aktionsbuttons -->
+            <div class="settings-actions">
+                <button type="button" class="cancel-btn">Abbrechen</button>
+                <button type="submit" class="save-btn">Änderungen speichern</button>
+            </div>
+        </form>
+    </main>
+    
+
+    </script>
+</body>
+</html>
