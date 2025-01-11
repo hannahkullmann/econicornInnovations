@@ -33,9 +33,91 @@
     <main class="orders">
        
             <h1>Meine Bestellungen</h1>
+            <div class="oil-price-and-current-order">
+                <div class="oil-price">
+                    <h2>Aktueller Ölpreis</h2>
+                    <div class="row">
+                        <p class="oil-price-brutto"> 99,37€</p><p class="unit">/100l brutto</p>
+                    </div>
 
-            <h2>Aktueller Ölpreis</h2>
-            <h2>Aktuelle Bestellungen</h2>
+                    <div class="row">
+                        <p class="oil-price-netto">83,50€</p><p class="unit">/100l netto</p>
+                    </div>
+                </div>
+
+                <div class="order-status-widget">
+                    <div class="widget-header">
+                        <h3>Aktuelle Bestellung</h3>
+                        <span class="order-number">BO-2024-042</span>
+                    </div>
+            
+                    <div class="order-info">
+                        <div class="info-row">
+                            <span class="label">Produkt:</span>
+                            <span class="value">Heizöl Premium</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Menge:</span>
+                            <span class="value">5.000 L</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Liefertermin:</span>
+                            <span class="value">24.01.2024</span>
+                        </div>
+                    </div>
+            
+                    <div class="status-timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bestellung eingegangen</h4>
+                                <p>22.01.2024 - 09:15</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bestellung bestätigt</h4>
+                                <p>22.01.2024 - 10:30</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Bestellung versendet</h4>
+                                <p>24.01.2024 - 10:30</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Lieferung abgeschlossen</h4>
+                                <p>Ausstehend</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="delivery-estimate">
+                        <div class="estimate-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E30613" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="estimate-text">
+                            <p>Voraussichtliche Lieferung</p>
+                            <strong>Heute zwischen 13:00 - 15:00 Uhr</strong>
+                        </div>
+                    </div>
+            
+                    <div class="widget-footer">
+                        <button class="contact-btn">Support kontaktieren</button>
+                        <button class="details-btn">Details anzeigen</button>
+                    </div>
+                </div>
+            </div>
 
 
             <h2>Betsellhistorie</h2>
