@@ -21,7 +21,7 @@ Ein modernes Webportal für Rödl energie Kunden zur Verwaltung ihrer Heizöl-Be
   - Marketing per Telefon nur, wenn der Kunde das auch wünscht und wenn es ausgehend vom Tankfüllstand sinnvoll ist
   - Marketing per Mail automatisiert
 
-## Planung
+## 📋 Planung
 
 - **Aktueller Stand**
   - Prototyp des Frontends mittels HTML, CSS und JavaScript
