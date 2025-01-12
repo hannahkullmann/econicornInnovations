@@ -44,3 +44,10 @@ Ein modernes Webportal für Rödl energie Kunden zur Verwaltung ihrer Heizöl-Be
 - Node.js
 - REST API
 
+## 📊 Analysen zur Rödl Bestellhistorie
+
+- data_analysis.py
+- data.csv
+- price_data.csv
+
+Die Python-Datei dient der umfassenden Bereinigung und Verarbeitung der Daten. Zahlreiche Funktionen liefern wertvolle Einblicke in die Bestellhistorie von Rödl Energie. Beim Ausführen der Datei werden viele aussagekräftige Plots erstellt. Die dafür benötigten Daten sind in den CSV-Dateien data.csv und price_data.csv gespeichert. Beim Öffnen der Python-Datei im selben Ordner werden die Daten automatisch eingelesen.
